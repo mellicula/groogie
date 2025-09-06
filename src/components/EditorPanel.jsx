@@ -187,7 +187,7 @@ export function EditorPanel({
       <div className="section">
         <h3 style={{ marginTop: 0, marginBottom: '12px' }}>Choreography</h3>
         <div style={{ 
-          maxHeight: '300px', 
+          maxHeight: '200px', 
           overflowY: 'auto', 
           background: '#1a1a1a', 
           borderRadius: '8px', 
