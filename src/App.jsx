@@ -13,10 +13,10 @@ import { useLoader } from '@react-three/fiber'
 function FloatingLogos() {
   const texture = useLoader(THREE.TextureLoader, logoImg);
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
-  texture.repeat.set(20, 10); // adjust tiling
+  texture.repeat.set(180, 120); // adjust tiling
 
   return (
-    <mesh scale={[200, 200, 1]} position={[0, 0, -100]}>
+    <mesh scale={[2000, 2000, 1]} position={[0, 0, -100]}>
       <planeGeometry args={[1, 1]} />
       <meshBasicMaterial map={texture} />
     </mesh>
@@ -29,11 +29,11 @@ export default function App() {
   // dancer ids and initial spawn positions
   const dancerIds = ['dancer1', 'dancer2', 'dancer3', 'dancer4', 'dancer5']
   const spawnPositions = {
-    dancer1: [-20, 0, -2],  // Back left
-    dancer2: [0, 0, -2],    // Back center
-    dancer3: [20, 0, -2],    // Back right
-    dancer4: [-10, 0, 5],    // Front left
-    dancer5: [10, 0, 5]      // Front right
+    dancer1: [-25, 0, -2],  // Back left
+    dancer2: [-5, 0, -2],    // Back center
+    dancer3: [15, 0, -2],    // Back right
+    dancer4: [-15, 0, 5],    // Front left
+    dancer5: [5, 0, 5]      // Front right
   }
 
   const [selectedDancer, setSelectedDancer] = useState('dancer1')
