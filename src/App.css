@@ -1,0 +1,34 @@
+/* simple layout: canvas on left, editor on right */
+.editor-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 320px;
+  height: 100vh;
+  background: linear-gradient(180deg,#0f1220 0%, #0b0b0f 100%);
+  color: #fff;
+  padding: 16px;
+  box-shadow: -6px 0 24px rgba(0,0,0,0.6);
+  font-family: 'Futura', 'Futura PT', 'Futura-Medium', 'Futura Medium', 'FuturaStd-Medium', 'Futura Std', 'Futura', 'Avenir Next', 'Avenir', 'Helvetica Neue', 'Helvetica', sans-serif;
+  z-index: 4;
+}
+
+.editor-panel h2 { margin: 0 0 12px 0; color: #7aa2ff; }
+.editor-panel .section { margin-bottom: 14px; }
+.small-muted { color: #9aa3b2; font-size: 13px; }
+.choreo-block {
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.choreo-block .meta { font-size: 13px; color:#eee }
+.controls { display:flex; gap:8px; margin-top:10px; }
+.btn { padding:8px 10px; border-radius:6px; border:none; background:#24324a; color:white; }
+.btn-danger { background:#9b2b2b; }
+.btn-success { background:#227a4a; }
+.timeline { position: absolute; left: 12px; bottom: 18px; right: 360px; height: 120px; background: rgba(0,0,0,0.35); border-radius:8px; padding:10px; color: #ddd; display:flex; flex-direction:column; gap:8px; }
+.timeline .row { display:flex; align-items:center; gap:8px; }
+.small-input { width:60px; padding:4px; border-radius:4px; background:#111; color:#fff; border:1px solid #333; }
