@@ -1,4 +1,5 @@
-[![Live on Vercel](https://img.shields.io/badge/Live-Vercel-FF2D20)](https://groogie.vercel.app/)
+# Groogie
+    - choreography tool for students majoring in various Fine Art disciplines
 
 # React + Vite
 
