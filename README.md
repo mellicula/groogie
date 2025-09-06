@@ -1,3 +1,5 @@
+[![Live on Vercel](https://img.shields.io/badge/Live-Vercel-FF2D20)](https://groogie.vercel.app/)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
