@@ -44,6 +44,13 @@ export default function App() {
     dancer4: [],
     dancer5: []
   })
+  const [dancerModels, setDancerModels] = useState({
+    dancer1: 'combined.glb',
+    dancer2: 'combined.glb',
+    dancer3: 'combined.glb',
+    dancer4: 'combined.glb',
+    dancer5: 'combined.glb'
+  })
   const [isPlaying, setIsPlaying] = useState(false)
   const [globalPlaying, setGlobalPlaying] = useState(false)
   const [awaitingStageClick, setAwaitingStageClick] = useState(false)
@@ -118,6 +125,13 @@ export default function App() {
   const handleGlobalStop = () => {
     setGlobalPlaying(false)
     setIsPlaying(false) // Also stop individual dancer playback
+  }
+
+  const handleModelChange = (modelPath) => {
+    setDancerModels(prev => ({
+      ...prev,
+      [selectedDancer]: modelPath
+    }))
   }
 
   return (
@@ -199,6 +213,7 @@ export default function App() {
               isSelected={selectedDancer === id}
               onSelect={() => setSelectedDancer(id)}
               isPlaying={globalPlaying || (isPlaying && selectedDancer === id)}
+              modelPath={dancerModels[id]}
             />
           ))}
 
@@ -273,7 +288,9 @@ export default function App() {
         isPlaying={isPlaying && selectedDancer}
         awaitingStageClick={awaitingStageClick}
         cancelAwaiting={() => setAwaitingStageClick(false)}
+        dancerModel={dancerModels[selectedDancer]}
+        onModelChange={handleModelChange}
       />
-    </div>
+      </div>
   )
 }

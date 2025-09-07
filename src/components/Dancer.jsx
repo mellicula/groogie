@@ -12,6 +12,7 @@ import * as SkeletonUtils from 'three/examples/jsm/utils/SkeletonUtils.js'
  - isSelected: bool
  - onSelect: function
  - isPlaying: bool (this dancer should play)
+ - modelPath: string path to the model file
 */
 export function Dancer({
   id,
@@ -19,10 +20,11 @@ export function Dancer({
   choreography = [],
   isSelected = false,
   onSelect = () => {},
-  isPlaying = false
+  isPlaying = false,
+  modelPath = 'combined.glb'
 }) {
   // load a shared skeleton model and separate animation file
-  const modelGltf = useGLTF('/models/combined.glb')
+  const modelGltf = useGLTF(`/models/${modelPath}`)
   const animGltf = useGLTF('/models/dances.glb')
   const localRef = useRef()
   const mixerRef = useRef(null)
