@@ -69,9 +69,7 @@ export function EditorPanel({
   onStop,
   isPlaying,
   awaitingStageClick,
-  cancelAwaiting,
-  dancerModel,
-  onModelChange
+  cancelAwaiting
 }) {
   const danceStepsCatalog = [
     'salsa1', 'salsa2', 'salsa3', 'salsa4', 'hiphop1', 'hiphop2', 'hiphop3', 'hiphop4', 'breakdance1', 'breakdance2', 'breakdance3', 'mystery'
@@ -105,22 +103,6 @@ export function EditorPanel({
           <option value="dancer4">Dancer 4 (Front Left)</option>
           <option value="dancer5">Dancer 5 (Front Right)</option>
         </select>
-      </div>
-
-      <div className="section">
-        <label className="small-muted">Model</label>
-        <select
-          value={dancerModel || 'combined.glb'}
-          onChange={(e) => onModelChange(e.target.value)}
-          style={{ width: '100%', padding: 8, marginTop: 8, background: '#0b0f18', color: '#fff', borderRadius: 6, border: '1px solid #222' }}
-        >
-          <option value="combined.glb">Combined Model</option>
-          <option value="char3.glb">Character 3</option>
-          <option value="boss.glb">Boss Model</option>
-        </select>
-        <div className="small-muted" style={{ marginTop: 6 }}>
-          Choose the 3D model for this dancer
-        </div>
       </div>
 
       <div className="section">
